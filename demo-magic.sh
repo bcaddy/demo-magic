@@ -153,6 +153,9 @@ function cmd() {
   printf "$x\033[0m"
   read command
   run_cmd "${command}"
+  if [[ $command != "" ]]; then
+    cmd
+  fi
 }
 
 function run_cmd() {
